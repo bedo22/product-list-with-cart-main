@@ -106,8 +106,15 @@ src/
   CartItem.tsx       row in the cart
   Cart.tsx           empty + populated state
   OrderModal.tsx     forwardRef to <dialog>
+public/
+  favicon-32x32.png
+  assets/
+    images/          product images, icons, empty-cart illustration
+    fonts/           Red Hat Text (not bundled; we use Google Fonts)
 data.json            product data (static import)
 ```
+
+Vite copies the entire `public/` folder to `dist/` verbatim during the build. That's why the product images referenced from `data.json` as `./assets/images/...` resolve correctly in both dev and the deployed site.
 
 ## What the user can do
 

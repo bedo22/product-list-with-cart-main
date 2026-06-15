@@ -1,8 +1,9 @@
 import type { Product, CartAction } from './types'
 import { formatPrice } from './format'
 import CartItem from './CartItem'
-import emptyCart from '../assets/images/illustration-empty-cart.svg'
 import { CarbonNeutralIcon } from './Icons'
+
+const emptyCartImage = `${import.meta.env.BASE_URL}assets/images/illustration-empty-cart.svg`
 
 export type CartEntry = { product: Product; quantity: number }
 
@@ -27,7 +28,7 @@ const Cart = ({ entries, total, count, dispatch, onConfirm }: Props) => {
         <div className="cart__empty">
           <img
             className="cart__empty-illustration"
-            src={emptyCart}
+            src={emptyCartImage}
             alt=""
           />
           <p className="cart__empty-text">Your added items will appear here</p>
